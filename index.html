@@ -115,13 +115,13 @@ footer{text-align:center;color:#6F727A;font-size:12.5px;padding:30px 16px 40px}
   </div>
 
   <div class="offer">
-    <div class="old">Pacote completo: R$ 27,90</div>
+    <div class="old">Pacote completo: R$ 39,90</div>
     <div style="font-size:14px;color:var(--mut);margin-top:4px">Só nesta página, para quem já comprou o básico:</div>
-    <div class="pr"><small>R$</small>15,70</div>
+    <div class="pr"><small>R$</small>29,90</div>
     <p>Pagamento único · Pix ou cartão · Acesso na hora no e-mail</p>
     <!-- BOTÃO DE UPSELL: se a Cakto fornecer o código de upsell de 1 clique, ele substitui este botão. -->
     <a class="btn" id="sim" href="https://pay.cakto.com.br/35yywue_1276053" data-plano="upsell">Sim! Quero os 100.000 arquivos e os bônus</a>
-    <a class="no" id="nao" href="#obrigado">Não, obrigado. Fico só com os 50.000 arquivos.</a>
+    <a class="no" id="nao" href="https://chegadeimpressaoperdida.vercel.app" data-plano="recusa">Não, obrigado. Fico só com os 50.000 arquivos.</a>
   </div>
   <div class="guar"><i>🛡️</i><div><b>Garantia de 7 dias.</b> <span style="color:var(--mut)">Não gostou? Pede o reembolso e recebe 100% de volta.</span></div></div>
   <div class="thanks" id="obrigado"><b class="disp" style="font-size:24px">Tudo certo!</b><p style="color:var(--mut);margin-top:8px">O acesso aos seus 50.000 arquivos chega no e-mail usado na compra. Confira também a caixa de spam e promoções. Boas impressões!</p></div>
@@ -132,7 +132,6 @@ footer{text-align:center;color:#6F727A;font-size:12.5px;padding:30px 16px 40px}
 var r=document.getElementById('row');r.innerHTML+=r.innerHTML;
 var q=new URLSearchParams(location.search),k=[];q.forEach(function(v,n){if(/^(utm_|src$|sck$|fbclid$|xcod$)/.test(n))k.push([n,v])});
 document.querySelectorAll('a[data-plano]').forEach(function(l){var hr=l.getAttribute('href');if(k.length&&/^https?:/.test(hr)){var u=new URL(hr);k.forEach(function(p){if(!u.searchParams.has(p[0]))u.searchParams.set(p[0],p[1])});l.href=u.toString()}});
-document.getElementById('nao').addEventListener('click',function(e){e.preventDefault();var t=document.getElementById('obrigado');t.style.display='block';t.scrollIntoView({behavior:'smooth'})});
 })();
 </script>
 </body>
